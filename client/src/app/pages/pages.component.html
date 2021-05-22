@@ -1,0 +1,13 @@
+<mat-sidenav-container>
+    
+    <mat-sidenav-content id="main" perfectScrollbar [disabled]="settings.fixedHeader" (psScrollY)="onPsScrollY($event)">
+        <div id="main-content" class="inner-sidenav-content transition-2" perfectScrollbar [disabled]="!settings.fixedHeader" (psScrollY)="onPsScrollY($event)"> 
+            <div #container>
+                download file
+                <button (click)="downloadFile()" mat-mini-fab class="right" color="accent" aria-label="">
+                    <mat-icon>print</mat-icon>
+                </button>
+            </div>
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>
